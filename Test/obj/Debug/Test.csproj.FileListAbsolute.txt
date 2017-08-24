@@ -1,0 +1,5 @@
+G:\vs workplace\JavaToCs\Test\bin\Debug\Test.exe.config
+G:\vs workplace\JavaToCs\Test\bin\Debug\Test.exe
+G:\vs workplace\JavaToCs\Test\bin\Debug\Test.pdb
+G:\vs workplace\JavaToCs\Test\obj\Debug\Test.exe
+G:\vs workplace\JavaToCs\Test\obj\Debug\Test.pdb

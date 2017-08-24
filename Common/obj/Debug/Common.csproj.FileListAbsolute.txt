@@ -1,0 +1,12 @@
+G:\vs workplace\FtpFileUpLoad\FtpFileLoad\Common\bin\Debug\Common.dll
+G:\vs workplace\FtpFileUpLoad\FtpFileLoad\Common\bin\Debug\Common.pdb
+G:\vs workplace\FtpFileUpLoad\FtpFileLoad\Common\obj\Debug\Common.dll
+G:\vs workplace\FtpFileUpLoad\FtpFileLoad\Common\obj\Debug\Common.pdb
+G:\vs workplace\FtpFileUpLoad\FtpFileLoad\Common\bin\Debug\Common.tlb
+G:\vs workplace\JavaToCs\Common\bin\Debug\Common.dll
+G:\vs workplace\JavaToCs\Common\bin\Debug\Common.pdb
+G:\vs workplace\JavaToCs\Common\bin\Debug\Common.tlb
+G:\vs workplace\JavaToCs\Common\obj\Debug\Common.dll
+G:\vs workplace\JavaToCs\Common\obj\Debug\Common.pdb
+G:\vs workplace\JavaToCs\Common\bin\Debug\NHibernate.dll
+G:\vs workplace\JavaToCs\Common\bin\Debug\Iesi.Collections.dll
