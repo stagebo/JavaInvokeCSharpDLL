@@ -26,7 +26,7 @@ jna中间件开源项目：
 示例说明blog：
 	http://blog.csdn.net/lovesomnus/article/details/45073343
 c++调用c#：
-	1、将c++项目改成clr公共运行时
+	1、将c++项目改成clr公共运行时 
 	2、using namespace 命名空间名
 	3、使用gcnew获得对象，对象名前面需要加^，开始访问
 
