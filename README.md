@@ -1,4 +1,4 @@
-JavaToCs
+JAVA通过c++中间件调用c#生成DLL
 ===
 	时间：2017-8-23 16:38:16<br>  
 	目的：java调用c动态链接库<br>  
@@ -25,7 +25,7 @@ JavaToCs
 	2、JNA 强大，集成  java---->c单方面调用，其基础是JNI<br>  
  
 	jna中间件开源项目：<br>  
-	https://github.com/java-native-access/jna<br>  
+	[JNA project](https://github.com/java-native-access/jna)<br>  
 	示例说明blog：
 	http://blog.csdn.net/lovesomnus/article/details/45073343<br>  
 	c++调用c：
