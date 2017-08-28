@@ -1,7 +1,4 @@
 ﻿  main.cpp
-g:\vs workplace\javatocs\dlltest01\main.h(16): warning C4190: “usingString”有指定的 C 链接，但返回了与 C 不兼容的 UDT“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”
-  E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
-main.cpp(25): warning C4477: “printf_s”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“System::String ^”
   .NETFramework,Version=v4.0.AssemblyAttributes.cpp
     正在创建库 G:\vs workplace\JavaToCs\x64\Debug\DllTest01.lib 和对象 G:\vs workplace\JavaToCs\x64\Debug\DllTest01.exp
   DllTest01.vcxproj -> G:\vs workplace\JavaToCs\x64\Debug\DllTest01.dll

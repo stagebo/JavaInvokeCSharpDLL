@@ -13,6 +13,5 @@ mian.h文件
 MYLIBAPI int add(int a,int b); //添加函数声明 
 MYLIBAPI char* getString(char* str); //添加函数声明 
 MYLIBAPI int reverse(int b);
-MYLIBAPI string usingString(string s);
 MYLIBAPI int stringArrayTest(char** str);
 MYLIBAPI int outTest();

@@ -5,6 +5,8 @@ Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934
 	hash=None, flags=None
 Assembly NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4: 
 	hash=None, flags=None
+Assembly TDYH, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
 Class Common.Class1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Common.CommonFunction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -13,3 +15,5 @@ Class Common.CommonFunction: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
     Add(Int32, Int32): PrivateScope, Public, Static, HideBySig
     getString(String): PrivateScope, Public, HideBySig
     outTest(Int32&(Out)): PrivateScope, Public, HideBySig
+    getResult(String, String): PrivateScope, Public, HideBySig
+    test(): PrivateScope, Public, HideBySig

@@ -3,3 +3,9 @@ G:\vs workplace\JavaToCs\Test\bin\Debug\Test.exe
 G:\vs workplace\JavaToCs\Test\bin\Debug\Test.pdb
 G:\vs workplace\JavaToCs\Test\obj\Debug\Test.exe
 G:\vs workplace\JavaToCs\Test\obj\Debug\Test.pdb
+G:\vs workplace\JavaToCs\Test\bin\Debug\TDQS.Contracts.dll
+G:\vs workplace\JavaToCs\Test\bin\Debug\TDQS.DBHelper.dll
+G:\vs workplace\JavaToCs\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+G:\vs workplace\JavaToCs\Test\bin\Debug\TDYH.dll
+G:\vs workplace\JavaToCs\Test\bin\Debug\TDYH.pdb
+G:\vs workplace\JavaToCs\Test\bin\Debug\TDYH.xml

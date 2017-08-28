@@ -1,0 +1,4 @@
+G:\vs workplace\JavaToCs\TDQS.Contracts\obj\x64\Debug\TDQS.Contracts.csprojResolveAssemblyReference.cache
+G:\vs workplace\JavaToCs\TDQS.Contracts\obj\x64\Debug\TDQS.Contracts.Properties.Resources.resources
+G:\vs workplace\JavaToCs\TDQS.Contracts\obj\x64\Debug\TDQS.Contracts.Shell.resources
+G:\vs workplace\JavaToCs\TDQS.Contracts\obj\x64\Debug\TDQS.Contracts.csproj.GenerateResource.Cache

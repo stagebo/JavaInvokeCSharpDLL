@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TDYH</name>
+    </assembly>
+    <members>
+        <member name="T:TDYH.TDYHDecorator">
+            <summary>
+            停电优化
+            </summary>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.#ctor">
+            <summary>
+            构造
+            </summary>
+            <param name="view">视图对象</param>
+            <param name="callType">可靠性计算类型</param>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.Do">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.Do(System.String,System.String,System.String)">
+            <summary>
+            执行停电计划优化
+            </summary>
+            <param name="connStr"></param>
+            <param name="dept"></param>
+            <param name="gchid"></param>
+            <returns>执行是否成功</returns>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.Check(System.String@)">
+            <summary>
+            算法计算前校验
+            </summary>
+            <returns>校验结果</returns>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.ClearResult">
+            <summary>
+            清理结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.SaveResult(System.Data.DataTable)">
+            <summary>
+            保存敏感性结果
+            </summary>
+            <param name="mytran">事务</param>
+            <returns>保存结果</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TDYH.TDYHDecorator.SaveReliabilityResult" -->
+        <member name="M:TDYH.TDYHDecorator.GetDoubleValue(System.Object)">
+            <summary>
+            获得数值数据
+            </summary>
+            <param name="value">数据</param>
+            <returns>数值数据</returns>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.GetDoubleValue(System.String)">
+            <summary>
+            获得数值数据
+            </summary>
+            <param name="sValue">数据</param>
+            <returns>数值数据</returns>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.GetIntValue(System.String)">
+            <summary>
+            获得数值数据
+            </summary>
+            <param name="sValue">数据</param>
+            <returns>数值数据</returns>
+        </member>
+        <member name="M:TDYH.TDYHDecorator.GetIntValue(System.Object)">
+            <summary>
+            获得数值数据
+            </summary>
+            <param name="value">数据</param>
+            <returns>数值数据</returns>
+        </member>
+        <member name="F:TDYH.TDYHDecorator.m_gchid">
+            <summary>
+            工程ID
+            </summary>
+        </member>
+        <member name="F:TDYH.TDYHDecorator.m_dept">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="F:TDYH.TDYHDecorator.m_message">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="F:TDYH.TDYHDecorator.m_database">
+            <summary>
+            数据库对象
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.mch">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjgdkyl_hj_h">
+            <summary>
+            平均供电可用率ASAI-LP（%）
+            1-平均停电持续时间/8760
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjgdkyl_gzh_h">
+            <summary>
+            平均供电可用率ASAI-LP（%）
+            1-平均停电持续时间/8760
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjgdkyl_yap_h">
+            <summary>
+            平均供电可用率ASAI-LP（%）
+            1-平均停电持续时间/8760
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjgdkyl_hj">
+            <summary>
+            平均供电可用率ASAI-LP（%）
+            1-平均停电持续时间/8760
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjgdkyl_gzh">
+            <summary>
+            平均供电可用率ASAI-LP（%）
+            1-平均停电持续时间/8760
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjgdkyl_yap">
+            <summary>
+            平均供电可用率ASAI-LP（%）
+            1-平均停电持续时间/8760
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjtdchxshj_gzh">
+            <summary>
+            平均停电持续时间SAIDI-LP（h/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjtdchxshj_gzh_h">
+            <summary>
+            平均停电持续时间SAIDI-LP（h/户.年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjtdchxshj_yap">
+            <summary>
+            平均停电持续时间SAIDI-LP（h/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjtdchxshj_yap_h">
+            <summary>
+            平均停电持续时间SAIDI-LP（h/户.年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjtdchxshj_hj">
+            <summary>
+            平均停电持续时间SAIDI-LP（h/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.pjtdchxshj_hj_h">
+            <summary>
+            平均停电持续时间SAIDI-LP（h/户.年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.tdpl_gzh">
+            <summary>
+            停电频率SAIFI-LP（次/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.tdpl_gzh_h">
+            <summary>
+            停电频率SAIFI-LP（次/户.年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.tdpl_yap">
+            <summary>
+            停电频率SAIFI-LP（次/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.tdpl_yap_h">
+            <summary>
+            停电频率SAIFI-LP（次/户.年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.tdpl_hj">
+            <summary>
+            停电频率SAIFI-LP（次/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.tdpl_hj_h">
+            <summary>
+            停电频率SAIFI-LP（次/户.年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.qgdl_gzh">
+            <summary>
+            缺供电量ENS-LP（kWh/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.qgdl_yap">
+            <summary>
+            缺供电量ENS-LP（kWh/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.qgdl_hj">
+            <summary>
+            缺供电量ENS-LP（kWh/年）
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.qgdl_hj_pj">
+            <summary>
+            平均缺供电量AENS(kWh/户·年)
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.qgdl_gzh_pj">
+            <summary>
+            平均缺供电量AENS(kWh/户·年)
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.qgdl_yap_pj">
+            <summary>
+            平均缺供电量AENS(kWh/户·年)
+            </summary>
+        </member>
+        <member name="P:TDYH.kkxResult.yhsh">
+            <summary>
+            用户数
+            </summary>
+        </member>
+    </members>
+</doc>

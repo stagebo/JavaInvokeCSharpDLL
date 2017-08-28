@@ -5,3 +5,4 @@ G:\vs workplace\JavaToCs\ComLib\obj\Debug\ComLib.dll
 G:\vs workplace\JavaToCs\ComLib\obj\Debug\ComLib.pdb
 G:\vs workplace\JavaToCs\ComLib\bin\Debug\System.Net.Http.dll
 G:\vs workplace\JavaToCs\ComLib\bin\Debug\System.Net.Http.xml
+G:\vs workplace\JavaToCs\ComLib\obj\Debug\ComLib.csprojResolveAssemblyReference.cache

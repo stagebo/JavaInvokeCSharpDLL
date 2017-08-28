@@ -9,6 +9,7 @@ main.cppÎÄ¼ş
 #include <string>
 using namespace Common;
 using namespace std;
+using namespace System;
 #define MYLIBAPI  extern   "C"     __declspec( dllexport )      
 
 #include "main.h"  
@@ -22,10 +23,10 @@ char* getString(char* str)
 {
 	CommonFunction^com = gcnew CommonFunction();
 	System::String^ p1 = gcnew System::String(str);
-	printf_s("this is c++ pro,invoke csharp method getString(),get result:\r\n[%s]\r\n", com->getString(p1));
-	printf_s("this is c++ print :%s\r\n",str);
-	char* result = "this is c++ result by method getString.\r\n";
-	return result;
+	String ^re= com->getString(p1);
+
+	char * resu = (char*)(void*)System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(re);
+	return resu;
 }
 int reverse(int b)
 {

@@ -10,3 +10,9 @@ G:\vs workplace\JavaToCs\Common\obj\Debug\Common.dll
 G:\vs workplace\JavaToCs\Common\obj\Debug\Common.pdb
 G:\vs workplace\JavaToCs\Common\bin\Debug\NHibernate.dll
 G:\vs workplace\JavaToCs\Common\bin\Debug\Iesi.Collections.dll
+G:\vs workplace\JavaToCs\Common\bin\Debug\TDQS.Contracts.dll
+G:\vs workplace\JavaToCs\Common\bin\Debug\TDQS.DBHelper.dll
+G:\vs workplace\JavaToCs\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+G:\vs workplace\JavaToCs\Common\bin\Debug\TDYH.dll
+G:\vs workplace\JavaToCs\Common\bin\Debug\TDYH.pdb
+G:\vs workplace\JavaToCs\Common\bin\Debug\TDYH.xml

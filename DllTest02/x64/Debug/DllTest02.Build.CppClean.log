@@ -1,13 +1,18 @@
 g:\vs workplace\javatocs\dlltest02\x64\debug\vc140.pdb
-g:\vs workplace\javatocs\dlltest02\x64\debug\main.obj
 g:\vs workplace\javatocs\dlltest02\x64\debug\.netframework,version=v4.0.assemblyattributes.obj
 g:\vs workplace\javatocs\dlltest02\x64\debug\.netframework,version=v4.0.assemblyattributes.asm
+g:\vs workplace\javatocs\dlltest02\x64\debug\main.obj
 g:\vs workplace\javatocs\x64\debug\comlib.dll
 g:\vs workplace\javatocs\x64\debug\common.dll
+g:\vs workplace\javatocs\x64\debug\tdyh.dll
 g:\vs workplace\javatocs\x64\debug\nhibernate.dll
+g:\vs workplace\javatocs\x64\debug\tdqs.contracts.dll
+g:\vs workplace\javatocs\x64\debug\tdqs.dbhelper.dll
 g:\vs workplace\javatocs\x64\debug\iesi.collections.dll
 g:\vs workplace\javatocs\x64\debug\comlib.pdb
 g:\vs workplace\javatocs\x64\debug\common.pdb
+g:\vs workplace\javatocs\x64\debug\tdyh.pdb
+g:\vs workplace\javatocs\x64\debug\tdyh.xml
 g:\vs workplace\javatocs\x64\debug\dlltest02.lib
 g:\vs workplace\javatocs\x64\debug\dlltest02.exp
 g:\vs workplace\javatocs\x64\debug\dlltest02.dll
@@ -24,4 +29,5 @@ g:\vs workplace\javatocs\dlltest02\x64\debug\dlltest02.tlog\link.write.1.tlog
 g:\vs workplace\javatocs\dlltest02\x64\debug\dlltest02.tlog\metagen.read.1.tlog
 g:\vs workplace\javatocs\dlltest02\x64\debug\dlltest02.tlog\comlib.dll.metagen
 g:\vs workplace\javatocs\dlltest02\x64\debug\dlltest02.tlog\common.dll.metagen
+g:\vs workplace\javatocs\dlltest02\x64\debug\dlltest02.tlog\tdyh.dll.metagen
 g:\vs workplace\javatocs\dlltest02\x64\debug\dlltest02.tlog\tzres.dll.bi

@@ -153,6 +153,9 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{3d228444-ac63-4cbb-98e4-56e692c47f5e}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\TDQS.Algorithm.TDYH\TDYH.csproj">
+      <Project>{14598f1a-2bc1-4c34-83a9-9d9d7f79c21d}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

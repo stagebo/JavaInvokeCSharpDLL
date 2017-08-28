@@ -1,0 +1,5 @@
+E:\TempWorkplace\01Platform\TDQS.DBHelper.dll
+E:\TempWorkplace\01Platform\TDQS.DBHelper.pdb
+E:\TempWorkplace\00SDK\01DLL\TDQS.DBHelper\obj\x86\Release\TDQS.DBHelper.csprojResolveAssemblyReference.cache
+E:\TempWorkplace\00SDK\01DLL\TDQS.DBHelper\obj\x86\Release\TDQS.DBHelper.dll
+E:\TempWorkplace\00SDK\01DLL\TDQS.DBHelper\obj\x86\Release\TDQS.DBHelper.pdb

@@ -1,0 +1,4 @@
+G:\vs workplace\JavaToCs\OtherLib\bin\Debug\OtherLib.dll
+G:\vs workplace\JavaToCs\OtherLib\bin\Debug\OtherLib.pdb
+G:\vs workplace\JavaToCs\OtherLib\obj\Debug\OtherLib.dll
+G:\vs workplace\JavaToCs\OtherLib\obj\Debug\OtherLib.pdb

@@ -1,8 +1,8 @@
 ﻿  main.cpp
-main.cpp(24): warning C4273: “add”: dll 链接不一致
+main.cpp(33): warning C4273: “add”: dll 链接不一致
   main.cpp(13): note: 参见“add”的前一个定义
-main.cpp(30): warning C4273: “mul”: dll 链接不一致
-  main.cpp(14): note: 参见“mul”的前一个定义
+main.cpp(40): warning C4273: “Do”: dll 链接不一致
+  main.cpp(14): note: 参见“Do”的前一个定义
   .NETFramework,Version=v4.0.AssemblyAttributes.cpp
     正在创建库 G:\vs workplace\JavaToCs\x64\Debug\DllTest02.lib 和对象 G:\vs workplace\JavaToCs\x64\Debug\DllTest02.exp
   DllTest02.vcxproj -> G:\vs workplace\JavaToCs\x64\Debug\DllTest02.dll

@@ -4,7 +4,9 @@ g:\vs workplace\javatocs\dlltest01\x64\debug\.netframework,version=v4.0.assembly
 g:\vs workplace\javatocs\dlltest01\x64\debug\.netframework,version=v4.0.assemblyattributes.asm
 g:\vs workplace\javatocs\x64\debug\common.dll
 g:\vs workplace\javatocs\x64\debug\nhibernate.dll
+g:\vs workplace\javatocs\x64\debug\tdqs.dbhelper.dll
 g:\vs workplace\javatocs\x64\debug\iesi.collections.dll
+g:\vs workplace\javatocs\x64\debug\tdqs.contracts.dll
 g:\vs workplace\javatocs\x64\debug\common.pdb
 g:\vs workplace\javatocs\x64\debug\dlltest01.lib
 g:\vs workplace\javatocs\x64\debug\dlltest01.exp

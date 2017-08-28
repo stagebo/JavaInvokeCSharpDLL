@@ -1,0 +1,7 @@
+E:\TempWorkplace\DLLMaker\TDQS.Algorithm.TDYH\obj\Debug\TDYH.csprojResolveAssemblyReference.cache
+E:\01Run\TDQS.CNP\CNP\TDYH.dll.config
+E:\01Run\TDQS.CNP\CNP\TDYH.xml
+E:\01Run\TDQS.CNP\CNP\TDYH.dll
+E:\01Run\TDQS.CNP\CNP\TDYH.pdb
+E:\TempWorkplace\DLLMaker\TDQS.Algorithm.TDYH\obj\Debug\TDYH.dll
+E:\TempWorkplace\DLLMaker\TDQS.Algorithm.TDYH\obj\Debug\TDYH.pdb

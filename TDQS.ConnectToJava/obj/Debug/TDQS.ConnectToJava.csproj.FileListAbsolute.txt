@@ -1,0 +1,8 @@
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\bin\Debug\TDQS.ConnectToJava.dll
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\bin\Debug\TDQS.ConnectToJava.pdb
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\bin\Debug\TDQS.ConnectToJava.tlb
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\bin\Debug\System.Net.Http.dll
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\bin\Debug\System.Net.Http.xml
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\obj\Debug\TDQS.ConnectToJava.csprojResolveAssemblyReference.cache
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\obj\Debug\TDQS.ConnectToJava.dll
+G:\vs workplace\JavaToCs\TDQS.ConnectToJava\obj\Debug\TDQS.ConnectToJava.pdb
