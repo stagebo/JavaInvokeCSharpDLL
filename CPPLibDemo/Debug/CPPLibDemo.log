@@ -1,0 +1,36 @@
+﻿  demo.cpp
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(11): error C2871: “LibDemo”: 具有该名称的命名空间不存在
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(12): error C2871: “System”: 具有该名称的命名空间不存在
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(14): warning C4273: “getString”: dll 链接不一致
+  g:\vs workplace\javatocs\cpplibdemo\demo.cpp(5): note: 参见“getString”的前一个定义
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(15): error C2065: “Function”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(15): error C2065: “fun”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(15): error C2065: “gcnew”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(15): error C2146: 语法错误: 缺少“;”(在标识符“Function”的前面)
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(15): error C3861: “Function”: 找不到标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(16): error C2065: “String”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(16): error C2065: “params”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(16): error C2065: “gcnew”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(16): error C2146: 语法错误: 缺少“;”(在标识符“String”的前面)
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(16): error C3861: “String”: 找不到标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(17): error C2065: “String”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(17): error C2065: “result”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(17): error C2065: “fun”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(17): error C2227: “->getString”的左边必须指向类/结构/联合/泛型类型
+  g:\vs workplace\javatocs\cpplibdemo\demo.cpp(17): note: 类型是“unknown-type”
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(17): error C2065: “params”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(18): error C2653: “System”: 不是类或命名空间名称
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(18): error C2065: “result”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(18): error C3861: “StringToHGlobalAnsi”: 找不到标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(23): warning C4273: “noneInvokeDLL”: dll 链接不一致
+  g:\vs workplace\javatocs\cpplibdemo\demo.cpp(6): note: 参见“noneInvokeDLL”的前一个定义
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(27): warning C4273: “intTest”: dll 链接不一致
+  g:\vs workplace\javatocs\cpplibdemo\demo.cpp(7): note: 参见“intTest”的前一个定义
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(29): error C2065: “Function”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(29): error C2065: “fun”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(29): error C2065: “gcnew”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(29): error C2146: 语法错误: 缺少“;”(在标识符“Function”的前面)
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(29): error C3861: “Function”: 找不到标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(30): error C2065: “fun”: 未声明的标识符
+g:\vs workplace\javatocs\cpplibdemo\demo.cpp(30): error C2227: “->intTest”的左边必须指向类/结构/联合/泛型类型
+  g:\vs workplace\javatocs\cpplibdemo\demo.cpp(30): note: 类型是“unknown-type”

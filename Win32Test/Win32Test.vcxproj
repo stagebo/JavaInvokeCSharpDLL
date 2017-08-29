@@ -37,6 +37,7 @@
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -117,6 +118,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <CompileAsManaged>true</CompileAsManaged>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,6 +161,9 @@
     <ClCompile Include="Win32Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibDemo\LibDemo.csproj">
+      <Project>{1123b0ab-cdc4-4375-8442-36d888519f23}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\TDQS.Algorithm.TDYH\TDYH.csproj">
       <Project>{14598f1a-2bc1-4c34-83a9-9d9d7f79c21d}</Project>
     </ProjectReference>

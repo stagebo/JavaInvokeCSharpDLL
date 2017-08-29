@@ -13,11 +13,11 @@ namespace Test
         {
 
 
-            var tdyh = new TDYH.TDYHDecorator();
-            var result = tdyh.Do();
-            Console.WriteLine(result);
+            //var tdyh = new TDYH.TDYHDecorator();
+            //var result = tdyh.Do();
+            //Console.WriteLine(result);
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }

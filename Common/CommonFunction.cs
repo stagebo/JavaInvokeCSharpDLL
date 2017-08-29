@@ -4,8 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using NHibernate;
-using NHibernate.Cfg;
+
 
 using System.Configuration;
 using System.Data;
@@ -18,20 +17,20 @@ namespace Common
 {
     public class CommonFunction
     {
-        public static int Add(int a, int b)
-        {
-            ISession s = null;
-            try
-            {
-                ISessionFactory sf = new Configuration().BuildSessionFactory();
-                s = sf.OpenSession();
-            }
-            catch { }
-            return a + b;
-        }
+        //public static int Add(int a, int b)
+        //{
+        //    ISession s = null;
+        //    try
+        //    {
+        //        ISessionFactory sf = new Configuration().BuildSessionFactory();
+        //        s = sf.OpenSession();
+        //    }
+        //    catch { }
+        //    return a + b;
+        //}
         public string getString(string str)
         {
-            return $"this result is return from csharp method.received params [{str}],time:" + DateTime.Now.ToString();
+            return $"haha,this result is return from csharp method.received params [{str}],time:" + DateTime.Now.ToString();
         }
         public int outTest(out int k)
         {
@@ -39,12 +38,12 @@ namespace Common
             return 1;
         }
 
-        public string getResult(string a, string gchid)
-        {
-            Console.WriteLine("step2");
-            var t = new TDYH.TDYHDecorator().Do("", "", "");
-            return t;//.Do("",a,gchid);
-        }
+        //public string getResult(string a, string gchid)
+        //{
+        //    Console.WriteLine("step2");
+        //    //var t = new TDYH.TDYHDecorator().Do("", "", "");
+        //    return t;//.Do("",a,gchid);
+        //}
         public string test()
         {
             return "";// new OtherLib.OtherLib().getOtherString();

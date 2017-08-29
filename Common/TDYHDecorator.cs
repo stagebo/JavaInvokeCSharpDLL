@@ -4,11 +4,13 @@
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
-//using System.Configuration;
+
 //using System.Data;
 //using TDQS.DBHelper;
+//using System.Configuration;
+//using TDQS.Contracts;
 
-//namespace TDYH
+//namespace Common
 //{
 //    /// <summary>
 //    /// 停电优化
@@ -24,7 +26,6 @@
 //        /// <param name="callType">可靠性计算类型</param>
 //        public TDYHDecorator()
 //        {
-//            Console.WriteLine("step3");
 //            m_message = "停电计划优化";
 //        }
 
@@ -33,13 +34,13 @@
 //        #region 公有方法
 
 //        /// <summary>
-//        /// 
+//        /// 传String的另类传值方法
 //        /// </summary>
 //        /// <returns></returns>
 //        public string Do()
 //        {
-//            Console.WriteLine("do()");
-//            return "success tdyh";
+//            //var result = System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi(m_message);
+//            return m_message;
 //        }
 //        /// <summary>
 //        /// 执行停电计划优化
@@ -48,7 +49,7 @@
 //        /// <param name="dept"></param>
 //        /// <param name="gchid"></param>
 //        /// <returns>执行是否成功</returns>
-//        public string Do(string connStr, string dept, string gchid)
+//        public string Do(string connStr,string dept, string gchid)
 //        {
 
 //            string errMsg = "";
@@ -57,21 +58,21 @@
 //                m_database = new PostgreSqlDatabase(connStr);
 //                m_gchid = gchid;
 //                m_dept = dept;
-//                DataTable planTable = Check(out errMsg);
-//                if (planTable == null)
+//                DataTable planTable=Check(out errMsg);
+//                if (planTable==null)
 //                {
-//                    return 0 + "|" + errMsg;
+//                    return  0+"|"+errMsg;
 //                }
-//                if (!ClearResult())
+//                if(!ClearResult())
 //                {
 //                    errMsg = "清理" + m_message + "结果失败！";
 //                    return 0 + "|" + errMsg;
 //                }
-//                //if (!SaveResult(planTable))
-//                //{
-//                //    errMsg = "保存" + m_message + "结果失败！";
-//                //    return 0+"|"+errMsg;
-//                //}
+//                if (!SaveResult(planTable))
+//                {
+//                    errMsg = "保存" + m_message + "结果失败！";
+//                    return 0+"|"+errMsg;
+//                }
 //                return "1";
 //            }
 //            catch
@@ -127,187 +128,187 @@
 //        /// </summary>
 //        /// <param name="mytran">事务</param>
 //        /// <returns>保存结果</returns>
-//        // private bool SaveResult(DataTable planTable)
-//        // {
-//        //     /*
-//        //      1、	判断停电计划表中的“工作地点（停电设备）”的设备类型
-//        //      （1）	若为断路器、负荷开关，则以“工作地点（停电设备）”为元件ID，在YFMEA表中筛选出对应的负荷点ID；
-//        //      （2）	若为隔离开关、熔断器，则在YFMEA中找到故障隔离开关ID为该“工作地点（停电设备）”且上游恢复开关ID不为“-1”的任意一条记录，取其元件ID，筛选出对应的负荷点ID；
-//        //      2、	根据所有负荷点ID，计算停电计划表中每个负荷的停电次数及时长（单位h，需折算为分钟），注意只统计“工作方式”为停电的记录；
-//        //      3、	更新每个负荷点的预安排可靠性参数：
-//        //      （1）	预安排停电率=总停电次数/系统各类设备总数或总长度*100；
-//        //      （2）	预安排停电平均持续时间=∑单次停电时长/总停电次数*60；
-//        //      4、	按原有可靠性结果表处理方式生成可靠性计算结果（系统表、变电站表、馈线表）
-//        //     【注意事项】：
-//        //      1、	计算预安排停电率时，开关、配变类使用总台数，电缆、架空线使用总长度，单位为km；
-//        //     */
+//        private bool SaveResult(DataTable planTable)
+//        {
+//            /*
+//             1、	判断停电计划表中的“工作地点（停电设备）”的设备类型
+//             （1）	若为断路器、负荷开关，则以“工作地点（停电设备）”为元件ID，在YFMEA表中筛选出对应的负荷点ID；
+//             （2）	若为隔离开关、熔断器，则在YFMEA中找到故障隔离开关ID为该“工作地点（停电设备）”且上游恢复开关ID不为“-1”的任意一条记录，取其元件ID，筛选出对应的负荷点ID；
+//             2、	根据所有负荷点ID，计算停电计划表中每个负荷的停电次数及时长（单位h，需折算为分钟），注意只统计“工作方式”为停电的记录；
+//             3、	更新每个负荷点的预安排可靠性参数：
+//             （1）	预安排停电率=总停电次数/系统各类设备总数或总长度*100；
+//             （2）	预安排停电平均持续时间=∑单次停电时长/总停电次数*60；
+//             4、	按原有可靠性结果表处理方式生成可靠性计算结果（系统表、变电站表、馈线表）
+//            【注意事项】：
+//             1、	计算预安排停电率时，开关、配变类使用总台数，电缆、架空线使用总长度，单位为km；
+//            */
 
-//        //    string query_yfma=@"SELECT f_subgchid,f_no,f_fhdno, f_gzhglkgno,
-//        //f_shyhfkgno, f_entid, f_mch, f_type FROM ta_kkx2_yfmea where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' ) and f_type >=4";
-//        //     DataTable yfmea_table=m_database.QueryTable(string.Format(query_yfma,m_gchid));
-//        //     if(yfmea_table ==null||yfmea_table .Rows.Count ==0)
-//        //     {
-//        //         return true ;
-//        //     }
-//        //     EnumerableRowCollection<DataRow> yfmea_rows= yfmea_table.AsEnumerable();
-//        //     //名称、类型、编号、负荷点编号、故障隔离开关编号、上游恢复开关编号
-//        //     ILookup<string, Tuple<string,int,int, int, int, int,string>> yfmeaLUP = yfmea_rows.Select
-//        //         (r=> new Tuple<string,int, int, int, int, int,string>(
-//        //             r["f_mch"].ToString(),
-//        //             int.Parse(r["f_type"].ToString()),
-//        //             int.Parse(r["f_no"].ToString()), 
-//        //             int.Parse(r["f_fhdno"].ToString()),
-//        //             int.Parse(r["f_gzhglkgno"].ToString()),
-//        //             int.Parse(r["f_shyhfkgno"].ToString()),
-//        //             r["f_subgchid"].ToString())).ToLookup(key => key.Item1);
-//        //     IDictionary<int, string> yfmeaDic = 
-//        //         yfmea_rows.ToDictionary(key => int.Parse(key["f_no"].ToString()), value => value["f_mch"].ToString());
+//           string query_yfma=@"SELECT f_subgchid,f_no,f_fhdno, f_gzhglkgno,
+//       f_shyhfkgno, f_entid, f_mch, f_type FROM ta_kkx2_yfmea where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' ) and f_type >=4";
+//            DataTable yfmea_table=m_database.QueryTable(string.Format(query_yfma,m_gchid));
+//            if(yfmea_table ==null||yfmea_table .Rows.Count ==0)
+//            {
+//                return true ;
+//            }
+//            EnumerableRowCollection<DataRow> yfmea_rows= yfmea_table.AsEnumerable();
+//            //名称、类型、编号、负荷点编号、故障隔离开关编号、上游恢复开关编号
+//            ILookup<string, Tuple<string,int,int, int, int, int,string>> yfmeaLUP = yfmea_rows.Select
+//                (r=> new Tuple<string,int, int, int, int, int,string>(
+//                    r["f_mch"].ToString(),
+//                    int.Parse(r["f_type"].ToString()),
+//                    int.Parse(r["f_no"].ToString()), 
+//                    int.Parse(r["f_fhdno"].ToString()),
+//                    int.Parse(r["f_gzhglkgno"].ToString()),
+//                    int.Parse(r["f_shyhfkgno"].ToString()),
+//                    r["f_subgchid"].ToString())).ToLookup(key => key.Item1);
+//            IDictionary<int, string> yfmeaDic = 
+//                yfmea_rows.ToDictionary(key => int.Parse(key["f_no"].ToString()), value => value["f_mch"].ToString());
 
 
-//        //     IDictionary<int, Tuple<int, double,string>> fh_parmDic = new Dictionary<int, Tuple<int, double,string>>();
+//            IDictionary<int, Tuple<int, double,string>> fh_parmDic = new Dictionary<int, Tuple<int, double,string>>();
 
-//        //     ILookup<string, Tuple<string, object, object>> plan_LUP = planTable.AsEnumerable().
-//        //         Where(r => r["operation_mode"].ToString() == "停电").Select
-//        //         (r => new Tuple<string, object, object>(
-//        //             DealMCH(r["work_location"].ToString()), r["plan_startdate"], r["plan_enddate"])).ToLookup(key => key.Item1);
+//            ILookup<string, Tuple<string, object, object>> plan_LUP = planTable.AsEnumerable().
+//                Where(r => r["operation_mode"].ToString() == "停电").Select
+//                (r => new Tuple<string, object, object>(
+//                    DealMCH(r["work_location"].ToString()), r["plan_startdate"], r["plan_enddate"])).ToLookup(key => key.Item1);
 
-//        //     IEnumerator<IGrouping<string,Tuple<string, object, object>>> planEnumerator = plan_LUP.GetEnumerator();
+//            IEnumerator<IGrouping<string,Tuple<string, object, object>>> planEnumerator = plan_LUP.GetEnumerator();
 
-//        //     while(planEnumerator.MoveNext())
-//        //     {
-//        //         IGrouping<string,Tuple<string, object, object>> plan= planEnumerator.Current;
+//            while(planEnumerator.MoveNext())
+//            {
+//                IGrouping<string,Tuple<string, object, object>> plan= planEnumerator.Current;
 
-//        //         Tuple<string, object, object> firstPlan = plan.FirstOrDefault();
+//                Tuple<string, object, object> firstPlan = plan.FirstOrDefault();
 
-//        //         if (firstPlan.Item2 == DBNull.Value)
-//        //         {
-//        //             continue;
-//        //         }
-//        //         DateTime begDate;
-//        //         if (!DateTime.TryParse(firstPlan.Item2.ToString(), out begDate))
-//        //         {
-//        //             continue;
-//        //         }
-//        //         if (firstPlan.Item3 == DBNull.Value)
-//        //         {
-//        //             continue;
-//        //         }
-//        //         DateTime endDate;
-//        //         if (!DateTime.TryParse(firstPlan.Item3.ToString(), out endDate))
-//        //         {
-//        //             continue;
-//        //         }
-//        //         //计算停电持续时间
-//        //         TimeSpan ts = endDate - begDate;
-//        //         double minutes = ts.TotalMinutes;
+//                if (firstPlan.Item2 == DBNull.Value)
+//                {
+//                    continue;
+//                }
+//                DateTime begDate;
+//                if (!DateTime.TryParse(firstPlan.Item2.ToString(), out begDate))
+//                {
+//                    continue;
+//                }
+//                if (firstPlan.Item3 == DBNull.Value)
+//                {
+//                    continue;
+//                }
+//                DateTime endDate;
+//                if (!DateTime.TryParse(firstPlan.Item3.ToString(), out endDate))
+//                {
+//                    continue;
+//                }
+//                //计算停电持续时间
+//                TimeSpan ts = endDate - begDate;
+//                double minutes = ts.TotalMinutes;
 
-//        //         //名称、类型、编号、负荷点编号、故障隔离开关编号、上游恢复开关编号
-//        //         Tuple<string, int, int, int, int, int,string> yFmeaInfo = yfmeaLUP[plan.Key].FirstOrDefault();
-//        //         if (yFmeaInfo == null)
-//        //         {
-//        //             continue;
-//        //         }
+//                //名称、类型、编号、负荷点编号、故障隔离开关编号、上游恢复开关编号
+//                Tuple<string, int, int, int, int, int,string> yFmeaInfo = yfmeaLUP[plan.Key].FirstOrDefault();
+//                if (yFmeaInfo == null)
+//                {
+//                    continue;
+//                }
 
-//        //         ElementTypeEx type = (ElementTypeEx)yFmeaInfo.Item2;
-//        //         switch (type)
-//        //         {
-//        //             case ElementTypeEx.断路器:
-//        //             case ElementTypeEx.负荷开关:
-//        //                 //若为断路器、负荷开关，则以“工作地点（停电设备）”为元件ID，在YFMEA表中筛选出对应的负荷点ID；
-//        //                 foreach (Tuple<string, int, int, int, int, int,string> yfmea in yfmeaLUP[plan.Key])
-//        //                 {
-//        //                     int fhdno = yFmeaInfo.Item4;
-//        //                     Tuple<int, double,string> fh_parm;
-//        //                     if (!fh_parmDic.TryGetValue(fhdno, out fh_parm))
-//        //                     {
-//        //                         fh_parm = new Tuple<int, double,string>(1, minutes,yfmea.Item7);
-//        //                         fh_parmDic.Add(fhdno, fh_parm);
-//        //                     }
-//        //                     else
-//        //                     {
-//        //                         fh_parm = new Tuple<int, double,string>(fh_parm.Item1+1, fh_parm.Item2 + minutes,yfmea.Item7);
-//        //                         fh_parmDic[fhdno] = fh_parm;
-//        //                     }
-//        //                 }
-//        //                 break;
-//        //             case ElementTypeEx.熔断器:
-//        //             case ElementTypeEx.隔离开关:
-//        //                 //若为隔离开关、熔断器，则在YFMEA中找到故障隔离开关ID为该“工作地点（停电设备）”且上游恢复开关ID不为“-1”的任意一条记录，取其元件ID，
-//        //                 //筛选出对应的负荷点ID；
-//        //                 int glkgno = yFmeaInfo.Item5;
-//        //                 string glkgmch = "";
-//        //                 if(!yfmeaDic.TryGetValue(glkgno,out glkgmch))
-//        //                 {
-//        //                     continue;
-//        //                 }
-//        //                 Tuple<string, int, int, int, int, int,string> yFmeaInfo_glkg = yfmeaLUP[glkgmch].Where(r => r.Item6 != -1).FirstOrDefault();
-//        //                 if (yFmeaInfo_glkg==null)
-//        //                 {
-//        //                     continue;
-//        //                 }
-//        //                 int fhdno_glkg = yFmeaInfo_glkg.Item4;
-//        //                 Tuple<int, double,string> fh_parm_glkg;
-//        //                 if (!fh_parmDic.TryGetValue(fhdno_glkg, out fh_parm_glkg))
-//        //                 {
-//        //                     fh_parm_glkg = new Tuple<int, double,string>(1, minutes,yFmeaInfo_glkg.Item7);
-//        //                     fh_parmDic.Add(fhdno_glkg, fh_parm_glkg);
-//        //                 }
-//        //                 else
-//        //                 {
-//        //                     fh_parm_glkg = new Tuple<int, double,string>(fh_parm_glkg.Item1 + 1, fh_parm_glkg.Item2 + minutes,yFmeaInfo_glkg.Item7);
-//        //                     fh_parmDic[fhdno_glkg] = fh_parm_glkg;
-//        //                 }
-//        //                 break;
-//        //             default:
-//        //                 continue;
-//        //         }
+//                ElementTypeEx type = (ElementTypeEx)yFmeaInfo.Item2;
+//                switch (type)
+//                {
+//                    case ElementTypeEx.断路器:
+//                    case ElementTypeEx.负荷开关:
+//                        //若为断路器、负荷开关，则以“工作地点（停电设备）”为元件ID，在YFMEA表中筛选出对应的负荷点ID；
+//                        foreach (Tuple<string, int, int, int, int, int,string> yfmea in yfmeaLUP[plan.Key])
+//                        {
+//                            int fhdno = yFmeaInfo.Item4;
+//                            Tuple<int, double,string> fh_parm;
+//                            if (!fh_parmDic.TryGetValue(fhdno, out fh_parm))
+//                            {
+//                                fh_parm = new Tuple<int, double,string>(1, minutes,yfmea.Item7);
+//                                fh_parmDic.Add(fhdno, fh_parm);
+//                            }
+//                            else
+//                            {
+//                                fh_parm = new Tuple<int, double,string>(fh_parm.Item1+1, fh_parm.Item2 + minutes,yfmea.Item7);
+//                                fh_parmDic[fhdno] = fh_parm;
+//                            }
+//                        }
+//                        break;
+//                    case ElementTypeEx.熔断器:
+//                    case ElementTypeEx.隔离开关:
+//                        //若为隔离开关、熔断器，则在YFMEA中找到故障隔离开关ID为该“工作地点（停电设备）”且上游恢复开关ID不为“-1”的任意一条记录，取其元件ID，
+//                        //筛选出对应的负荷点ID；
+//                        int glkgno = yFmeaInfo.Item5;
+//                        string glkgmch = "";
+//                        if(!yfmeaDic.TryGetValue(glkgno,out glkgmch))
+//                        {
+//                            continue;
+//                        }
+//                        Tuple<string, int, int, int, int, int,string> yFmeaInfo_glkg = yfmeaLUP[glkgmch].Where(r => r.Item6 != -1).FirstOrDefault();
+//                        if (yFmeaInfo_glkg==null)
+//                        {
+//                            continue;
+//                        }
+//                        int fhdno_glkg = yFmeaInfo_glkg.Item4;
+//                        Tuple<int, double,string> fh_parm_glkg;
+//                        if (!fh_parmDic.TryGetValue(fhdno_glkg, out fh_parm_glkg))
+//                        {
+//                            fh_parm_glkg = new Tuple<int, double,string>(1, minutes,yFmeaInfo_glkg.Item7);
+//                            fh_parmDic.Add(fhdno_glkg, fh_parm_glkg);
+//                        }
+//                        else
+//                        {
+//                            fh_parm_glkg = new Tuple<int, double,string>(fh_parm_glkg.Item1 + 1, fh_parm_glkg.Item2 + minutes,yFmeaInfo_glkg.Item7);
+//                            fh_parmDic[fhdno_glkg] = fh_parm_glkg;
+//                        }
+//                        break;
+//                    default:
+//                        continue;
+//                }
 
-//        //     }
-//        //     /*
-//        //      3、	更新每个负荷点的预安排可靠性参数：
-//        //      （1）	预安排停电率=总停电次数/系统各类设备总数或总长度*100；
-//        //      （2）	预安排停电平均持续时间=∑单次停电时长/总停电次数*60；
-//        //      */
-//        //     string querySQL_allfhd=@"select count(a.f_count) from( 
-//        // select count(f_id) as f_count from t_pb where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' )
-//        // union
-//        // select count(f_id) as f_count from t_zhshb where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' )
-//        // union
-//        // select count(f_id) as f_count from t_pdbyq_new where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' ) 
-//        // ) a";
-//        //     double allFH=0;
-//        //     DataTable allFHTable=m_database.QueryTable(string.Format(querySQL_allfhd,m_gchid));
-//        //     if(allFHTable !=null&&allFHTable.Rows.Count >0)
-//        //     {
-//        //         if(!double.TryParse(allFHTable .Rows[0][0].ToString (),out allFH))
-//        //         {
-//        //             allFH=0;
-//        //         }
-//        //     }
-//        //     string updateSQL_clearYFameValue = @"update ta_kkx2_yfmea set f_fhdyapgzhl=0 ,f_fhdyapgzhtdpjchxshj=0 where 
-//        //         f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' ) ";
-//        //     if(m_database.Execute(string.Format(updateSQL_clearYFameValue,m_gchid))==-1)
-//        //     {
-//        //         return false;
-//        //     }
-//        //     string updateSQL_haveParm = "update ta_kkx2_yfmea set f_fhdyapgzhl={0} ,f_fhdyapgzhtdpjchxshj={1} where f_subgchid='{2}' and f_fhdno={3};";
-//        //     StringBuilder updateBuilder = new StringBuilder();
-//        //     foreach (int fhNo in fh_parmDic.Keys)
-//        //     {
-//        //         Tuple<int,double,string> fhInfo=fh_parmDic[fhNo];
-//        //         //预安排停电率=总停电次数/系统各类设备总数或总长度*100；
-//        //         double yaptdl=allFH==0?0:fhInfo.Item1/allFH;
-//        //         //预安排停电平均持续时间=∑单次停电时长/总停电次数*60；
-//        //         double yappjtdchxshj=fhInfo.Item1==0?0:fhInfo.Item2/fhInfo.Item1;
-//        //         updateBuilder.Append(string.Format(updateSQL_haveParm, yaptdl, yappjtdchxshj, fhInfo.Item3, fhNo));
-//        //     }
-//        //     if (m_database.Execute(updateBuilder.ToString()) == -1)
-//        //     {
-//        //         return false;
-//        //     }
-//        //     //重新汇总结果
-//        //     return SaveReliabilityResult();
-//        // }
+//            }
+//            /*
+//             3、	更新每个负荷点的预安排可靠性参数：
+//             （1）	预安排停电率=总停电次数/系统各类设备总数或总长度*100；
+//             （2）	预安排停电平均持续时间=∑单次停电时长/总停电次数*60；
+//             */
+//            string querySQL_allfhd=@"select count(a.f_count) from( 
+//        select count(f_id) as f_count from t_pb where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' )
+//        union
+//        select count(f_id) as f_count from t_zhshb where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' )
+//        union
+//        select count(f_id) as f_count from t_pdbyq_new where f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' ) 
+//        ) a";
+//            double allFH=0;
+//            DataTable allFHTable=m_database.QueryTable(string.Format(querySQL_allfhd,m_gchid));
+//            if(allFHTable !=null&&allFHTable.Rows.Count >0)
+//            {
+//                if(!double.TryParse(allFHTable .Rows[0][0].ToString (),out allFH))
+//                {
+//                    allFH=0;
+//                }
+//            }
+//            string updateSQL_clearYFameValue = @"update ta_kkx2_yfmea set f_fhdyapgzhl=0 ,f_fhdyapgzhtdpjchxshj=0 where 
+//                f_subgchid in (select f_subgchid from t_subgch where f_gchid='{0}' ) ";
+//            if(m_database.Execute(string.Format(updateSQL_clearYFameValue,m_gchid))==-1)
+//            {
+//                return false;
+//            }
+//            string updateSQL_haveParm = "update ta_kkx2_yfmea set f_fhdyapgzhl={0} ,f_fhdyapgzhtdpjchxshj={1} where f_subgchid='{2}' and f_fhdno={3};";
+//            StringBuilder updateBuilder = new StringBuilder();
+//            foreach (int fhNo in fh_parmDic.Keys)
+//            {
+//                Tuple<int,double,string> fhInfo=fh_parmDic[fhNo];
+//                //预安排停电率=总停电次数/系统各类设备总数或总长度*100；
+//                double yaptdl=allFH==0?0:fhInfo.Item1/allFH;
+//                //预安排停电平均持续时间=∑单次停电时长/总停电次数*60；
+//                double yappjtdchxshj=fhInfo.Item1==0?0:fhInfo.Item2/fhInfo.Item1;
+//                updateBuilder.Append(string.Format(updateSQL_haveParm, yaptdl, yappjtdchxshj, fhInfo.Item3, fhNo));
+//            }
+//            if (m_database.Execute(updateBuilder.ToString()) == -1)
+//            {
+//                return false;
+//            }
+//            //重新汇总结果
+//            return SaveReliabilityResult();
+//        }
 
 
 //        // <summary>
@@ -322,7 +323,7 @@
 
 //            #region 3.2、馈线
 
-//            DataTable mgxyzh_kx = m_database.QueryTable(
+//            DataTable mgxyzh_kx = m_database .QueryTable(
 //                string.Format(@"
 //select  v1.f_kxid,v1.f_kxmch,v1.f_bdzhid,v1.f_bdzhmch,v1.f_fhdgzhl,v1.f_fhdyapgzhl,
 //            v1.f_fhdnpjtdshj,v1.f_fhdyapnpjtdshj as f_fhdyapnpjtdshj,
@@ -603,7 +604,7 @@
 //                foreach (KeyValuePair<string, kkxResult> result in resultDic_bdzh)
 //                {
 //                    iIndex++;
-//                    object[] args =
+//                    object[] args = 
 //                    {
 //                        m_gchid,result.Key,result.Value .mch,
 //                        result.Value.pjgdkyl_hj_h,
@@ -612,7 +613,7 @@
 //                        result.Value.tdpl_hj_h,
 //                        result.Value.qgdl_hj,
 //                        result.Value.qgdl_hj_pj,
-
+                        
 //                        result.Value .pjtdchxshj_gzh_h,
 //                        result.Value .pjtdchxshj_gzh_h*60,
 //                        result.Value.tdpl_gzh_h,
@@ -686,9 +687,9 @@
 //                foreach (KeyValuePair<string, Tuple<string, string, kkxResult>> result in resultDic_kx)
 //                {
 //                    iIndex++;
-//                    object[] args =
+//                    object[] args = 
 //                    {
-
+                        
 //                        m_gchid,result.Key,result.Value.Item1,"", result.Value.Item3 .mch,
 //                        result.Value.Item3 .pjgdkyl_hj_h,
 //                        result.Value.Item3  .pjtdchxshj_hj_h,
@@ -696,7 +697,7 @@
 //                        result.Value.Item3 .tdpl_hj_h,
 //                        result.Value.Item3 .qgdl_hj,
 //                        result.Value.Item3 .qgdl_hj_pj,
-
+                        
 //                        result.Value.Item3  .pjtdchxshj_gzh_h,
 //                        result.Value.Item3  .pjtdchxshj_gzh_h*60,
 //                        result.Value.Item3 .tdpl_gzh_h,
@@ -735,7 +736,7 @@
 //            if (firstKH != -1)
 //            {
 //                int length = name.Length;
-//                name = name.Substring(0, firstKH);
+//                name = name.Substring(0,  firstKH);
 //            }
 //            return name;
 //        }
@@ -815,7 +816,7 @@
 //        /// <summary>
 //        /// 数据库对象
 //        /// </summary>
-//        private PostgreSqlDatabase m_database;
+//        private IDatabase m_database;
 
 //        #endregion // 属性及其私有变量
 

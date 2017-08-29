@@ -1,0 +1,6 @@
+G:\vs workplace\JavaToCs\ComLib\bin\Release\ComLib.dll
+G:\vs workplace\JavaToCs\ComLib\bin\Release\ComLib.pdb
+G:\vs workplace\JavaToCs\ComLib\bin\Release\System.Net.Http.dll
+G:\vs workplace\JavaToCs\ComLib\bin\Release\System.Net.Http.xml
+G:\vs workplace\JavaToCs\ComLib\obj\Release\ComLib.dll
+G:\vs workplace\JavaToCs\ComLib\obj\Release\ComLib.pdb

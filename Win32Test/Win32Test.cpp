@@ -2,15 +2,16 @@
 //
 
 #include "stdafx.h"
+#include <iostream>
+using namespace std;
 using namespace TDYH;
 using namespace System;
+using namespace LibDemo;
 
 int main()
 {
-	TDYHDecorator ^tdyh = gcnew TDYHDecorator();
-	String ^ result = tdyh->Do("","","");
-	char* out = (char*)(void*)System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(result);
-	printf_s("result:%s",out);
+	Function ^ f = gcnew Function();
+	printf_s("c# result:%d",f->intTest(3));
 	while (1);
 }
 

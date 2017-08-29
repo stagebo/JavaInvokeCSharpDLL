@@ -1,0 +1,11 @@
+﻿  demo.cpp
+demo.cpp(14): warning C4273: “getString”: dll 链接不一致
+  demo.cpp(5): note: 参见“getString”的前一个定义
+demo.cpp(23): warning C4273: “noneInvokeDLL”: dll 链接不一致
+  demo.cpp(6): note: 参见“noneInvokeDLL”的前一个定义
+demo.cpp(27): warning C4273: “intTest”: dll 链接不一致
+  demo.cpp(7): note: 参见“intTest”的前一个定义
+    正在创建库 G:\vs workplace\JavaToCs\x64\Release\CPPLibDemo.lib 和对象 G:\vs workplace\JavaToCs\x64\Release\CPPLibDemo.exp
+  LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
+  CPPLibDemo.vcxproj -> G:\vs workplace\JavaToCs\x64\Release\CPPLibDemo.dll
+  CPPLibDemo.vcxproj -> G:\vs workplace\JavaToCs\x64\Release\CPPLibDemo.pdb (Full PDB)

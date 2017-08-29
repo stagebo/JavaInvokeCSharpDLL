@@ -1,0 +1,20 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly TDYH, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly TDQS.Contracts, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d5fbca0d4d38a465: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly TDQS.DBHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d5fbca0d4d38a465: 
+	hash=None, flags=None
+Assembly System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class TDYH.TDYHDecorator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Dol(String, String, String): PrivateScope, Public, Static, HideBySig
+    Do(String, String, String): PrivateScope, Public, HideBySig

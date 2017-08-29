@@ -1,0 +1,5 @@
+G:\vs workplace\JavaToCs\Common\bin\Release\Common.dll
+G:\vs workplace\JavaToCs\Common\bin\Release\Common.pdb
+G:\vs workplace\JavaToCs\Common\bin\Release\Common.tlb
+G:\vs workplace\JavaToCs\Common\obj\Release\Common.dll
+G:\vs workplace\JavaToCs\Common\obj\Release\Common.pdb

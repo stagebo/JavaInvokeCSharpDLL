@@ -1,0 +1,12 @@
+﻿C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3270: 所生成项目的处理器架构“AMD64”与引用“G:\vs workplace\JavaToCs\LibDemo\bin\Debug\LibDemo.dll”的处理器架构“x86”不匹配。这种不匹配可能会导致运行时失败。请考虑通过配置管理器更改您的项目的目标处理器架构，以使您的项目与引用间的处理器架构保持一致，或者为引用关联一个与您的项目的目标处理器架构相符的处理器架构。
+  demo.cpp
+demo.cpp(14): warning C4273: “getString”: dll 链接不一致
+  demo.cpp(5): note: 参见“getString”的前一个定义
+demo.cpp(23): warning C4273: “noneInvokeDLL”: dll 链接不一致
+  demo.cpp(6): note: 参见“noneInvokeDLL”的前一个定义
+demo.cpp(27): warning C4273: “intTest”: dll 链接不一致
+  demo.cpp(7): note: 参见“intTest”的前一个定义
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+    正在创建库 G:\vs workplace\JavaToCs\x64\Debug\CPPLibDemo.lib 和对象 G:\vs workplace\JavaToCs\x64\Debug\CPPLibDemo.exp
+  CPPLibDemo.vcxproj -> G:\vs workplace\JavaToCs\x64\Debug\CPPLibDemo.dll
+  CPPLibDemo.vcxproj -> G:\vs workplace\JavaToCs\x64\Debug\CPPLibDemo.pdb (Full PDB)

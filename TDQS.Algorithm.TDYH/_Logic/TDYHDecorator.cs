@@ -35,11 +35,12 @@ namespace TDYH
         #region 公有方法
 
         /// <summary>
-        /// 
+        /// 传String的另类传值方法
         /// </summary>
         /// <returns></returns>
         public string Do()
         {
+            //var result = System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi(m_message);
             return m_message;
         }
         /// <summary>

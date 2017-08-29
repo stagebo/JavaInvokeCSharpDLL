@@ -1,0 +1,7 @@
+G:\vs workplace\JavaToCs\LibDemo\bin\Debug\LibDemo.dll
+G:\vs workplace\JavaToCs\LibDemo\bin\Debug\LibDemo.pdb
+G:\vs workplace\JavaToCs\LibDemo\bin\Debug\System.Net.Http.dll
+G:\vs workplace\JavaToCs\LibDemo\bin\Debug\System.Net.Http.xml
+G:\vs workplace\JavaToCs\LibDemo\obj\Debug\LibDemo.dll
+G:\vs workplace\JavaToCs\LibDemo\obj\Debug\LibDemo.pdb
+G:\vs workplace\JavaToCs\LibDemo\bin\Debug\LibDemo.tlb

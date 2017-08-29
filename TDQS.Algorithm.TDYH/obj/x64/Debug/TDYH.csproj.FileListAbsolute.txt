@@ -5,4 +5,3 @@ G:\01Run\TDQS.CNP\CNP\TDYH.pdb
 G:\vs workplace\JavaToCs\TDQS.Algorithm.TDYH\obj\x64\Debug\TDYH.dll
 G:\vs workplace\JavaToCs\TDQS.Algorithm.TDYH\obj\x64\Debug\TDYH.pdb
 G:\01Run\TDQS.CNP\CNP\TDYH.tlb
-G:\vs workplace\JavaToCs\TDQS.Algorithm.TDYH\obj\x64\Debug\TDYH.csprojResolveAssemblyReference.cache
