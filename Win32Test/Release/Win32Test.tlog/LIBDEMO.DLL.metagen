@@ -1,5 +1,5 @@
 ImageRuntimeVersion: v4.0.30319
-Assembly LibDemo, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+Assembly LibDemo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fedab5f6b7adf393: 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None

@@ -1,6 +1,8 @@
 ﻿  main.cpp
-main.cpp(41): warning C4273: “Do”: dll 链接不一致
+main.cpp(33): warning C4273: “Do”: dll 链接不一致
   main.cpp(14): note: 参见“Do”的前一个定义
+main.cpp(45): warning C4273: “add”: dll 链接不一致
+  main.cpp(15): note: 参见“add”的前一个定义
   .NETFramework,Version=v4.0.AssemblyAttributes.cpp
     正在创建库 G:\vs workplace\JavaToCs\Release\DllTest02.lib 和对象 G:\vs workplace\JavaToCs\Release\DllTest02.exp
   LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能

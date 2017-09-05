@@ -5,3 +5,4 @@ G:\vs workplace\JavaToCs\LibDemo\bin\x86\Release\System.Net.Http.dll
 G:\vs workplace\JavaToCs\LibDemo\bin\x86\Release\System.Net.Http.xml
 G:\vs workplace\JavaToCs\LibDemo\obj\x86\Release\LibDemo.dll
 G:\vs workplace\JavaToCs\LibDemo\obj\x86\Release\LibDemo.pdb
+G:\vs workplace\JavaToCs\LibDemo\obj\x86\Release\LibDemo.csprojResolveAssemblyReference.cache

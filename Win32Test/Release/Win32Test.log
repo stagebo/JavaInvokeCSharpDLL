@@ -1,2 +1,4 @@
-﻿  Win32Test.vcxproj -> G:\vs workplace\JavaToCs\Release\Win32Test.exe
+﻿  Win32Test.cpp
+  LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
+  Win32Test.vcxproj -> G:\vs workplace\JavaToCs\Release\Win32Test.exe
   Win32Test.vcxproj -> G:\vs workplace\JavaToCs\Release\Win32Test.pdb (Full PDB)
