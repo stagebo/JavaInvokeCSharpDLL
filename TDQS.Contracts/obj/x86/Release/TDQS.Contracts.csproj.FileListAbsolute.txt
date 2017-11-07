@@ -1,8 +1,0 @@
-E:\TempWorkplace\01Platform\TDQS.Contracts.dll
-E:\TempWorkplace\01Platform\TDQS.Contracts.pdb
-E:\TempWorkplace\00SDK\01DLL\TDQS.Contracts\obj\x86\Release\TDQS.Contracts.csprojResolveAssemblyReference.cache
-E:\TempWorkplace\00SDK\01DLL\TDQS.Contracts\obj\x86\Release\TDQS.Contracts.Properties.Resources.resources
-E:\TempWorkplace\00SDK\01DLL\TDQS.Contracts\obj\x86\Release\TDQS.Contracts.Shell.resources
-E:\TempWorkplace\00SDK\01DLL\TDQS.Contracts\obj\x86\Release\TDQS.Contracts.csproj.GenerateResource.Cache
-E:\TempWorkplace\00SDK\01DLL\TDQS.Contracts\obj\x86\Release\TDQS.Contracts.dll
-E:\TempWorkplace\00SDK\01DLL\TDQS.Contracts\obj\x86\Release\TDQS.Contracts.pdb
